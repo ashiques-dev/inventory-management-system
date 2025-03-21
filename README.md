@@ -32,28 +32,50 @@ This project is a backend API for a simple Inventory Management System built usi
 - Virtualenv (optional, for isolated environment)
 
 1. **Clone the Repository**:
-   git clone <repository_url>
+```sh
+
+   git clone https://github.com/ashiques-dev/inventory-management-system.git
    cd inventory-management-system
    
+```
+
 2. Create a Virtual Environment (optional):
+```sh
+
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
    
 3. Install Dependencies:
+```sh
+
    pip install -r requirements.txt
+```
 
 4. Run Database Migrations:
+```sh
+
    python manage.py makemigrations
    python manage.py migrate
+```
    
 5. Create a Superuser (optional for admin access):
+```sh
+
    python manage.py createsuperuser
+```
 
 6. Start the Celery Worker in a separate terminal:
-    celery -A ims.celery worker --pool=solo -l info  (windows)
+```sh
+
+    celery -A ims.celery worker --pool=solo -l info  #(windows)
+```
 
 7.Run the Development Server:
-  python manage.py runserver   (The API will be available at http://127.0.0.1:8000.)
+```sh
+
+  python manage.py runserver  # (The API will be available at http://127.0.0.1:8000.)
+```
 
 
    
